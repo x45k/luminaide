@@ -143,11 +143,11 @@ impl eframe::App for MyApp {
             egui::CentralPanel::default().show(ctx, |ui| {
                 if let Some(ref mut contents) = self.file_contents {
                     egui::ScrollArea::both()
-                        .auto_shrink([false; 2]) // Prevent auto-shrinking on both axes
+                        .auto_shrink([false; 2])
                         .show(ui, |ui| {
                             ui.add(
                                 egui::TextEdit::multiline(contents)
-                                    .font(egui::TextStyle::Monospace) // Use monospaced font
+                                    .font(egui::TextStyle::Monospace) 
                                     .code_editor()
                                     .desired_width(f32::INFINITY),
                             );
